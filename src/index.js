@@ -1,17 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+let clients = [
+    {clientSurname: "Иванов", clientName: "Иван", balance: 100, id: 1},
+    {clientSurname: "Петров", clientName: "Петр", balance: 300, id: 2},
+    {clientSurname: "Сидоров", clientName: "Сидор", balance: 230, id: 3},
+    {clientSurname: "Григорьев", clientName: "Григорий", balance: -100, id: 4},
+];
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <App clients={clients}/>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
